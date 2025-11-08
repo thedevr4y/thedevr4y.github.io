@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проекты — TheDevr4y</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --text: #f0f0f0;
+      --accent: #4af;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 20px 40px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1.2em;
+      text-align: center;
+    }
 
+    /* Карточки */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2em;
+      width: 100%;
+      max-width: 900px;
+    }
+    .card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 14px;
+      padding: 1.2em;
+      transition: 0.3s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+    .card h3 {
+      margin: 0 0 0.4em;
+      color: var(--accent);
+      font-size: 1.1em;
+    }
+    .card p {
+      margin: 0 0 0.8em;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card a:hover {
+      color: white;
+    }
+
+    footer {
+      margin-top: auto;
+      font-size: 0.75em;
+      color: #666;
+    }
+
+    /* Меню-гамбургер */
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      width: 28px;
+      height: 22px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .menu-btn span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: var(--text);
+      margin-bottom: 5px;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 220px;
+      height: 100vh;
+      background: #111;
+      transform: translateX(100%);
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      z-index: 999;
+    }
+    .menu.active {
+      transform: translateX(0);
+    }
+    .menu a {
+      font-size: 1em;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .menu a:hover {
+      color: white;
+      transform: scale(1.05);
+    }
+    .menu-btn.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-btn.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-btn" id="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">🏠 Главная</a>
+    <a href="projects/index.html">🧩 Проекты</a>
+  </div>
+
+  <h1>🧩 Мои проекты</h1>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Телеграм ИИ-бот</h3>
+      <p>Телеграм с доступом к ИИ</p>
+      <a href="" target="_blank">[soon]</a>
+    </div>
+    <div class="card">
+      <h3>Smart Room Simulation</h3>
+      <p>3D-модель умной комнаты с системой управления устройствами и ИИ.</p>
+      <a href="" target="_blank">[soon]</a>
+    </div>
+    <div class="card">
+      <h3>Российская консоль</h3>
+      <p>Достойный конкурент PS, Xbox, Nintendo из РФ!</p>
+      <a href="" target="_blank">[soon]</a>
+    </div>
+  </div>
+
+  <footer>© 2025 TheDevr4y</footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
