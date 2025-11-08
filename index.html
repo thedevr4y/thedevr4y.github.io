@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,6 +25,7 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      position: relative;
     }
     h1 {
       font-size: 2.2rem;
@@ -32,7 +33,7 @@
     }
     p {
       color: #aaa;
-      max-width: 300px;
+      max-width: 320px;
     }
     .links {
       margin-top: 1.5em;
@@ -56,20 +57,92 @@
       font-size: 0.75em;
       color: #666;
     }
+
+    /* Меню-гамбургер */
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      width: 28px;
+      height: 22px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .menu-btn span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: var(--text);
+      margin-bottom: 5px;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 220px;
+      height: 100vh;
+      background: #111;
+      transform: translateX(100%);
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      z-index: 999;
+    }
+    .menu.active {
+      transform: translateX(0);
+    }
+    .menu a {
+      font-size: 1em;
+    }
+    .menu-btn.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-btn.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
   </style>
 </head>
 <body>
-  <h1>👋 Hey, I'm <span style="color: var(--accent)">TheDevr4y</span></h1>
-  <p>Developer • Maker • Tech Explorer<br>Creating smart apps and digital ideas.</p>
+  <div class="menu-btn" id="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">🏠 Главная</a>
+    <a href="projects.html">🧩 Проекты</a>
+  </div>
+
+  <h1>👋 Привет, я <span style="color: var(--accent)">The Devr4y</span></h1>
+  <p>Разработчик • Создатель • Техно-исследователь<br>Создаю умные приложения и цифровые идеи.</p>
 
   <div class="links">
     <a href="https://youtube.com/@TheDevr4y" target="_blank">📺 YouTube</a>
     <a href="https://t.me/thedevr4y" target="_blank">💬 Telegram</a>
     <a href="https://vk.com/thedevr4y" target="_blank">📸 VK</a>
     <a href="https://habr.com/ru/users/thedevr4y/" target="_blank">🧠 Habr</a>
-    <a href="mailto:thedevr4y@proton.me">📩 Email</a>
-  </div>
+    <a href="mailto:thedevr4y@gmail.com">📩 Email</a>
+    <a href="mailto:thedevr4y@internet.ru">📩 Email</a>
+  <div>
 
   <footer>© 2025 TheDevr4y</footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
