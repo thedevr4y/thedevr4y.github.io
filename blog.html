@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог — TheDevR4y</title>
+<meta name="description" content="Заметки TheDevR4y о разработке, архитектуре и инструментах.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">R4y<span class="cursor"></span></a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">главная</a></li>
+        <li><a href="projects.html">проекты</a></li>
+        <li><a href="resume.html">опыт</a></li>
+        <li><a href="blog.html">блог</a></li>
+        <li><a href="contact.html">контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="contact.html" class="btn btn-ghost btn-sm">Связаться</a>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">03 — блог</div>
+    <h1>Заметки о разработке</h1>
+    <p style="max-width:60ch">Пишу о том, с чем сталкиваюсь в реальных проектах: архитектура, инструменты, ошибки и выводы.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <a href="blog-post.html" class="post-featured reveal">
+      <div class="ph"><span class="glyph" style="font-family:'Space Grotesk';font-weight:700;font-size:42px;color:var(--line);">★</span></div>
+      <div class="pf-body">
+        <span class="post-tag">#архитектура</span>
+        <h3 style="font-size:24px;margin:10px 0;">Простой пример: как сочетаются Kafka и Golang</h3>
+        <p>Разбираю, как построить надёжный пайплайн обработки событий без лишней сложности — на примере микросервиса на Go.</p>
+        <span class="post-meta"><span>12 июня 2026</span><span>· 6 мин чтения</span></span>
+      </div>
+    </a>
+
+    <div class="blog-grid">
+      <a href="blog-post.html" class="post-card reveal">
+        <span class="post-tag">#backend</span>
+        <h3>Аутентификация без боли: JWT на практике</h3>
+        <p>Разбираю частые ошибки при внедрении JWT и как их избежать в реальном проекте.</p>
+        <span class="post-meta"><span>28 мая 2026</span><span>· 5 мин</span></span>
+      </a>
+      <a href="blog-post.html" class="post-card reveal">
+        <span class="post-tag">#react</span>
+        <h3>Когда React Query заменяет Redux</h3>
+        <p>Личный опыт перехода на серверное состояние и что это даёт продукту.</p>
+        <span class="post-meta"><span>14 мая 2026</span><span>· 7 мин</span></span>
+      </a>
+      <a href="blog-post.html" class="post-card reveal">
+        <span class="post-tag">#docker</span>
+        <h3>Docker Compose для локальной разработки</h3>
+        <p>Собираю окружение из базы, кэша и API в три команды — шаблон, которым пользуюсь сам.</p>
+        <span class="post-meta"><span>2 мая 2026</span><span>· 4 мин</span></span>
+      </a>
+      <a href="blog-post.html" class="post-card reveal">
+        <span class="post-tag">#postgresql</span>
+        <h3>Индексы в PostgreSQL: когда они не помогают</h3>
+        <p>Разбираю случаи, когда добавление индекса не ускоряет запрос, а замедляет запись.</p>
+        <span class="post-meta"><span>19 апр 2026</span><span>· 6 мин</span></span>
+      </a>
+      <a href="blog-post.html" class="post-card reveal">
+        <span class="post-tag">#карьера</span>
+        <h3>Как я перешёл от верстки к full-stack</h3>
+        <p>Личная история и практические шаги для тех, кто хочет расширить стек.</p>
+        <span class="post-meta"><span>3 апр 2026</span><span>· 8 мин</span></span>
+      </a>
+      <a href="blog-post.html" class="post-card reveal">
+        <span class="post-tag">#инструменты</span>
+        <h3>Мой setup для разработки в 2026</h3>
+        <p>Редактор, терминал, расширения и мелочи, которые экономят часы в неделю.</p>
+        <span class="post-meta"><span>21 мар 2026</span><span>· 5 мин</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <span class="copyright">© 2026 TheDevR4y. Все права защищены.</span>
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:hello@thedevr4y.dev">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
